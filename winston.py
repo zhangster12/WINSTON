@@ -1,6 +1,5 @@
-#Wise Intelligent Nebulous Sophisticated Technical Operating System
-import speech_recognition as sr
 import os, pyttsx3
+import speech_recognition as sr
 
 os.system('cls')
 
