@@ -1,5 +1,5 @@
 # WINSTON
-WINSTON is Wise Intelligent Nebulous Sophisticated Technical Operating System
+WINSTON is Wise Intelligent Nebulous Sophisticated Technical Operating System.
 
 ## Installation
 ```
@@ -19,7 +19,6 @@ pipwin install pyaudio
 py winston.py
 ```
 ## Virtual Environment
-
 ### Activate virtual environment:
 ```
 vir_env/Scripts/activate
