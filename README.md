@@ -20,12 +20,12 @@ py winston.py
 ```
 
 ## Virtual Environment
-### Activate virtual environment:
+#### Activate virtual environment:
 ```
 vir_env/Scripts/activate
 ```
 
-### Leave virtual environment:
+#### Leave virtual environment:
 ```
 deactivate
 ```
