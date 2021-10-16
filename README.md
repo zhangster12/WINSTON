@@ -1,11 +1,13 @@
 # WINSTON
 WINSTON is Wise Intelligent Nebulous Sophisticated Technical Operating System.
 
-## Installation
+## Getting Started
+
+### Installation
 ```
-pip install speechRecognition
-pip install pyttsx3
 pip install pyaudio
+pip install pyttsx3
+pip install speechRecognition
 ```
 
 If `pip install pyaudio` doesn't work:
@@ -14,12 +16,13 @@ pip install pipwin
 pipwin install pyaudio
 ```
 
-## Run WINSTON:
+## Usage
+### Run WINSTON:
 ```
 py winston.py
 ```
 
-## Virtual Environment
+### Virtual Environment
 #### Activate virtual environment:
 ```
 vir_env/Scripts/activate
@@ -30,9 +33,15 @@ vir_env/Scripts/activate
 deactivate
 ```
 
-## Push updates to GitHub:
+### Push updates to GitHub:
 ```
 git add .
 git commit -m "Edited file"
 git push origin
 ```
+
+## Roadmap
+- [ ] 
+
+## Contact
+Project Link: [https://github.com/zhangster12/WINSTON](https://github.com/zhangster12/WINSTON)
