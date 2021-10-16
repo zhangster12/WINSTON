@@ -41,7 +41,9 @@ git push origin
 ```
 
 ## Roadmap
-- [ ] 
+- [ ] Implement continuous listening
+- [ ] Add typing option
+- [ ] Open different apps
 
 ## Contact
 Project Link: [https://github.com/zhangster12/WINSTON](https://github.com/zhangster12/WINSTON)

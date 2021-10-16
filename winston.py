@@ -12,13 +12,16 @@ def speak_text(text):
     engine.say(text)
     engine.runAndWait()
 
-try:
-    with sr.Microphone() as source:
-        print('Listening...')
-        audio = listener.listen(source)
-        text = listener.recognize_google(audio)
-        speak_text(text)
+while True:
+    try:
+        with sr.Microphone() as source:
+            print('Listening...')
+            audio = listener.listen(source)
+            text = listener.recognize_google(audio).lower()
+            if 'what does winston stand for' in text:
+                speak_text('WINSTON is Wise Intelligent Nebulous Sophisticated Technical Operating System.')
+            speak_text(text)
 
-except:
-    speak_text('The microphone\'s not working.')
-    pass
+    except:
+        speak_text('The microphone\'s not working.')
+        pass
