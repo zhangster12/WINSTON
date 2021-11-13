@@ -18,9 +18,13 @@ while True:
             print('Listening...')
             audio = listener.listen(source)
             text = listener.recognize_google(audio).lower()
+            print(text.capitalize())
             if 'what does winston stand for' in text:
                 speak_text('WINSTON is Wise Intelligent Nebulous Sophisticated Technical Operating System.')
-            speak_text(text)
+            elif 'excel' in text:
+                os.system('start excel.exe')
+            elif 'exit' in text:
+                break
 
     except:
         speak_text('The microphone\'s not working.')
