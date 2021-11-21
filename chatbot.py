@@ -1,7 +1,7 @@
 from decouple import config
 import openai
 
-openai.api_key = config("OPENAI_API_KEY")
+openai.api_key = config('OPENAI_API_KEY')
 
 class chatbot:
     chat_log = 'Human: Hello, who are you?\nAI: I am doing great. How can I help you today?\n'
