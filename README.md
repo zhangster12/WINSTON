@@ -42,12 +42,12 @@ git push origin
 ```
 
 ## Roadmap
-- [ ] Implement continuous listening
-- [ ] Add typing option
-- [ ] Open different apps
-- [X] Implement exit from continuous listening
-- [ ] Sometimes it doesn't listen
 - [ ] Add time
+- [ ] Add typing option
+- [ ] Implement continuous listening
+- [ ] Open different apps
+- [ ] Sometimes it doesn't listen
+- [X] Implement exit from continuous listening
 
 ## Contact
 Project Link: [https://github.com/zhangster12/WINSTON](https://github.com/zhangster12/WINSTON)

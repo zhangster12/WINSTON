@@ -1,6 +1,6 @@
+from chatbot import chatbot
 import os, pyttsx3
 import speech_recognition as sr
-from chatbot import chatbot
 
 os.system('cls')
 
