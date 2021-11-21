@@ -19,5 +19,10 @@ class chatbot:
             best_of = 1,
             stop = ['\nHuman']
         )
-        self.chat_log = f'{self.chat_log}{prompt}{response.choices[0].text.strip()}'
-        return response.choices[0].text.strip()
+
+        answer = response.choices[0].text.strip()
+        self.append_to_chatlog(question.capitalize(), answer)
+        return answer
+
+    def append_to_chatlog(self, question, answer):
+        self.chat_log = f'{self.chat_log}Human: {question}\nAI: {answer}\n'

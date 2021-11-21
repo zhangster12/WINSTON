@@ -5,6 +5,7 @@ WINSTON is Wise Intelligent Nebulous Sophisticated Technical Operating System.
 
 ### Installation
 ```
+pip install openai
 pip install pyaudio
 pip install pyttsx3
 pip install speechRecognition
