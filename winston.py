@@ -1,9 +1,12 @@
 import os, pyttsx3
 import speech_recognition as sr
+from chatbot import chatbot
 
 os.system('cls')
 
+# Create class instance
 listener = sr.Recognizer()
+chatbot = chatbot()
 
 # Speaks a line of text
 def speak_text(text):
@@ -23,9 +26,10 @@ while True:
                 speak_text('WINSTON is Wise Intelligent Nebulous Sophisticated Technical Operating System.')
             elif 'excel' in text:
                 os.system('start excel.exe')
-            elif 'exit' in text:
+            elif any(phrase in text for phrase in ['exit', 'goodbye', 'quit']):
                 break
-
+            else:
+                speak_text(chatbot.ask(text))
     except:
         speak_text('The microphone\'s not working.')
         pass

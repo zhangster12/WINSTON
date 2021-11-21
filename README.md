@@ -45,6 +45,8 @@ git push origin
 - [ ] Add typing option
 - [ ] Open different apps
 - [X] Implement exit from continuous listening
+- [ ] Sometimes it doesn't listen
+- [ ] Add time
 
 ## Contact
 Project Link: [https://github.com/zhangster12/WINSTON](https://github.com/zhangster12/WINSTON)
