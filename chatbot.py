@@ -4,9 +4,9 @@ import openai
 
 openai.api_key = config('OPENAI_API_KEY')
 
-
 class Chatbot:
     '''Provides chatbot function from OpenAI's GPT-3'''
+
     chat_log = 'Human: Hello, who are you?\n\
         AI: I am doing great. How can I help you today?\n'
 
@@ -30,4 +30,5 @@ class Chatbot:
 
     def append_to_chatlog(self, question, answer):
         '''Appends the user's question and AI's answer to chatlog'''
+
         self.chat_log = f'{self.chat_log}Human: {question}\nAI: {answer}\n'

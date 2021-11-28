@@ -1,10 +1,11 @@
 '''Main file where WINSTON is run'''
 import os
+
 import pyttsx3
 import speech_recognition as sr
+
 from chatbot import Chatbot
 from time_info import Time
-
 
 os.system('cls')
 
@@ -13,14 +14,13 @@ listener = sr.Recognizer()
 chatbot = Chatbot()
 time_info = Time()
 
-
 def speak_text(text):
     '''Speaks a line of text'''
+
     engine = pyttsx3.init()
     print(text)
     engine.say(text)
     engine.runAndWait()
-
 
 while True:
     try:
