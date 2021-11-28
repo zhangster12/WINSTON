@@ -3,13 +3,15 @@ import openai
 
 openai.api_key = config('OPENAI_API_KEY')
 
+
 class chatbot:
-    chat_log = 'Human: Hello, who are you?\nAI: I am doing great. How can I help you today?\n'
+    chat_log = 'Human: Hello, who are you?\n\
+        AI: I am doing great. How can I help you today?\n'
 
     def ask(self, question):
         prompt = f'{self.chat_log}Human: {question}\nAI: '
         response = openai.Completion.create(
-            engine = "davinci",
+            engine = 'davinci',
             prompt = prompt,
             temperature = 0.9,
             max_tokens = 150,
