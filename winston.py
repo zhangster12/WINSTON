@@ -1,11 +1,8 @@
 '''Main file where WINSTON is run'''
-import os
-
-import pyttsx3
-import speech_recognition as sr
-
 from chatbot import Chatbot
 from time_info import Time
+import os, pyttsx3
+import speech_recognition as sr
 
 os.system('cls')
 
@@ -31,8 +28,7 @@ while True:
             print(listened_text.capitalize())
 
             if 'what does winston stand for' in listened_text:
-                speak_text('WINSTON is Wise Intelligent Nebulous \
-                    Sophisticated Technical Operating System.')
+                speak_text('WINSTON is Wise Intelligent Nebulous Sophisticated Technical Operating System.')
             elif 'excel' in listened_text:
                 os.system('start excel.exe')
             elif any(phrase in listened_text for phrase in ['exit', 'goodbye', 'quit']):
@@ -43,6 +39,10 @@ while True:
                 speak_text(time_info.get_month())
             elif 'day of week' in listened_text:
                 speak_text(time_info.get_day_of_week())
+            elif 'what time is it' in listened_text:
+                speak_text(time_info.get_current_time())
+            elif 'date' in listened_text:
+                speak_text(time_info.get_date())
             else:
                 speak_text(chatbot.ask(listened_text))
 

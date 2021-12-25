@@ -48,7 +48,7 @@ git push origin
 - [ ] Open different apps
 - [ ] Sometimes it doesn't listen
 - [X] Implement exit from continuous listening
-- [ ] Implement local time
+- [X] Implement local time
 
 ## Contact
 Project Link: [https://github.com/zhangster12/WINSTON](https://github.com/zhangster12/WINSTON)

@@ -5,8 +5,20 @@ class Time:
     '''Provides current time elements'''
 
     now = datetime.now()
+    current_time = now.strftime('%H:%M:%S')
+    date = now.strftime('%B %d, %Y')
     month = now.strftime('%B')
     weekday = now.strftime('%A')
+
+    def get_date(self):
+        '''Gets current month'''
+
+        return self.date
+
+    def get_current_time(self):
+        '''Gets current month'''
+
+        return self.current_time
 
     def get_month(self):
         '''Gets current month'''
