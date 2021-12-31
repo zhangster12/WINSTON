@@ -43,7 +43,7 @@ git push origin
 
 ## Roadmap
 - [X] Add time
-- [ ] Add typing option
+- [X] Add typing option
 - [ ] Implement continuous listening
 - [ ] Open different apps
 - [ ] Sometimes it doesn't listen

@@ -24,8 +24,12 @@ while True:
         with sr.Microphone() as source:
             print('Listening...')
             audio = listener.listen(source)
-            listened_text = listener.recognize_google(audio).lower()
-            print(listened_text.capitalize())
+
+            try:
+                listened_text = listener.recognize_google(audio).lower()
+                print(listened_text.capitalize())
+            except sr.UnknownValueError as e:
+                listened_text = input('Type your message.\n')
 
             if 'what does winston stand for' in listened_text:
                 speak_text('WINSTON is Wise Intelligent Nebulous Sophisticated Technical Operating System.')
@@ -49,6 +53,3 @@ while True:
     except KeyboardInterrupt:
         speak_text('Goodbye.')
         break
-
-    except Exception:
-        speak_text('The microphone\'s not working.')

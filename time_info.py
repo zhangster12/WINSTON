@@ -11,12 +11,12 @@ class Time:
     weekday = now.strftime('%A')
 
     def get_date(self):
-        '''Gets current month'''
+        '''Gets current date'''
 
         return self.date
 
     def get_current_time(self):
-        '''Gets current month'''
+        '''Gets current time'''
 
         return self.current_time
 
