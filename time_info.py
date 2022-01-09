@@ -7,25 +7,22 @@ class Time:
     now = datetime.now()
     current_time = now.strftime('%H:%M:%S')
     date = now.strftime('%B %d, %Y')
+    year = now.strftime('%Y')
     month = now.strftime('%B')
     weekday = now.strftime('%A')
 
-    def get_date(self):
-        '''Gets current date'''
+    def check_phrase_time(self, phrase):
+        if 'month' in phrase:
+            return self.month
 
-        return self.date
+        elif 'day of week' in phrase:
+            return self.weekday
 
-    def get_current_time(self):
-        '''Gets current time'''
+        elif 'what time is it' in phrase:
+            return self.current_time
 
-        return self.current_time
+        elif 'date' in phrase:
+            return self.date
 
-    def get_month(self):
-        '''Gets current month'''
-
-        return self.month
-
-    def get_day_of_week(self):
-        '''Gets current week of day'''
-
-        return self.weekday
+        elif 'year' in phrase:
+            return self.year

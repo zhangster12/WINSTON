@@ -39,14 +39,13 @@ while True:
                 break
             elif 'help' in listened_text:
                 print('Excel: Open Excel')
-            elif 'month' in listened_text:
-                speak_text(time_info.get_month())
-            elif 'day of week' in listened_text:
-                speak_text(time_info.get_day_of_week())
-            elif 'what time is it' in listened_text:
-                speak_text(time_info.get_current_time())
-            elif 'date' in listened_text:
-                speak_text(time_info.get_date())
+            elif 'clear' in listened_text:
+                os.system('cls')
+
+            # Time related
+            elif any(phrase in listened_text for phrase in ['month', 'day of week', 'time', 'date', 'year']):
+                speak_text(time_info.check_phrase_time(listened_text))
+
             else:
                 speak_text(chatbot.ask(listened_text))
 
