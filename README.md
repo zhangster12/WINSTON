@@ -9,6 +9,7 @@ pip install openai
 pip install pyaudio
 pip install pyttsx3
 pip install speechRecognition
+pip install wikipedia
 ```
 
 If `pip install pyaudio` doesn't work:
