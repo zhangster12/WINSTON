@@ -7,7 +7,7 @@ def speak_text(text):
     '''Speaks a line of text'''
 
     engine = pyttsx3.init()
-    print('WINSTON: ' + text)
+    print('WINSTON: ' + str(text))
     engine.say(text)
     engine.runAndWait()
 

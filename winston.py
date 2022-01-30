@@ -17,14 +17,15 @@ while True:
             listened_text = listen(source, 'Type your message.\n')
 
             # Wikipedia search
-            if any(phrase in listened_text for phrase in ['search', 'wikipedia']):
+            if all(phrase in listened_text for phrase in ['search', 'wikipedia']):
                 wiki_search = listen(source, 'Type your search.\n')
 
                 print(wikipedia.summary(wikipedia.search(wiki_search)[0]))
                 input('Enter to continue.\n')
 
             elif any(phrase in listened_text for phrase in ['who are you',
-                'what does winston stand for']):
+                'what does winston stand for',
+                'what are you']):
 
                 speak_text('WINSTON is Wise Intelligent Nebulous Sophisticated Technical Operating System.')
 

@@ -24,5 +24,11 @@ class Time:
         elif 'date' in phrase:
             return self.date
 
+        elif 'last year' in phrase:
+            return int(self.year) - 1
+        
+        elif 'next year' in phrase:
+            return int(self.year) + 1
+
         elif 'year' in phrase:
             return self.year
