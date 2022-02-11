@@ -1,5 +1,6 @@
 '''Main file where WINSTON is run'''
 from audio import *
+from phrase import *
 from chatbot import Chatbot
 from time_info import Time
 import os, wikipedia
@@ -17,13 +18,13 @@ while True:
             listened_text = listen(source, 'Type your message.\n')
 
             # Wikipedia search
-            if all(phrase in listened_text for phrase in ['search', 'wikipedia']):
+            if check_all_phrase(listened_text, ['search', 'wikipedia']):
                 wiki_search = listen(source, 'Type your search.\n')
 
                 print(wikipedia.summary(wikipedia.search(wiki_search)[0]))
                 input('Enter to continue.\n')
 
-            elif any(phrase in listened_text for phrase in ['who are you',
+            elif check_all_phrase(listened_text, ['who are you',
                 'what does winston stand for',
                 'what are you']):
 
@@ -32,7 +33,7 @@ while True:
             elif 'excel' in listened_text:
                 os.system('start excel.exe')
 
-            elif any(phrase in listened_text for phrase in ['exit', 'goodbye', 'quit', 'go away', 'bye']):
+            elif check_all_phrase(listened_text, ['exit', 'goodbye', 'quit', 'go away', 'bye', 'cancel']):
                 speak_text('Goodbye.')
                 break
 
@@ -43,7 +44,7 @@ while True:
                 os.system('cls')
 
             # Time related
-            elif any(phrase in listened_text for phrase in ['month', 'day of week', 'time', 'date', 'year']):
+            elif check_all_phrase(listened_text, ['month', 'day of week', 'hour' 'time', 'date', 'year']):
                 speak_text(time_info.check_phrase_time(listened_text))
 
             else:
