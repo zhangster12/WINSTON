@@ -38,7 +38,7 @@ deactivate
 ### Push updates to GitHub:
 ```
 git add .
-git commit -m 'Edited file'
+git commit -m 'Streamlined code'
 git push origin
 ```
 

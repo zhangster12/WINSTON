@@ -8,14 +8,13 @@ class Time:
     now = datetime.now()
     current_time = now.strftime('%H:%M:%S')
     hour_mil = now.strftime('%H')
-    date = now.strftime('%B %d, %Y')
     year = now.strftime('%Y')
-    month = now.strftime('%B')
     weekday = now.strftime('%A')
+    time_list = ['date', 'day of week', 'day', 'hour', 'month', 'time', 'week', 'year']
 
     def check_phrase_time(self, phrase):
         if 'month' in phrase:
-            return self.month
+            return self.now.strftime('%B')
 
         elif 'day of week' in phrase:
             return self.weekday
@@ -27,7 +26,7 @@ class Time:
             return self.hour_mil
 
         elif 'date' in phrase:
-            return self.date
+            return self.now.strftime('%B %d, %Y')
 
         elif check_all_phrase(phrase, ['year', 'years']):
 

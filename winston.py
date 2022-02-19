@@ -44,7 +44,7 @@ while True:
                 os.system('cls')
 
             # Time related
-            elif check_all_phrase(listened_text, ['month', 'day of week', 'hour' 'time', 'date', 'year']):
+            elif check_all_phrase(listened_text, time_info.time_list):
                 speak_text(time_info.check_phrase_time(listened_text))
 
             else:
