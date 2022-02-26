@@ -6,20 +6,22 @@ class Time:
     '''Provides current time elements'''
 
     now = datetime.now()
-    current_time = now.strftime('%H:%M:%S')
+    current_time = now.strftime('%T')
+    day_of_week = now.strftime('%A')
     hour_mil = now.strftime('%H')
+    month = now.strftime('%B')
     year = now.strftime('%Y')
-    weekday = now.strftime('%A')
+
     time_list = ['date', 'day of week', 'day', 'hour', 'month', 'time', 'week', 'year']
 
     def check_phrase_time(self, phrase):
         if 'month' in phrase:
-            return self.now.strftime('%B')
+            return self.month
 
         elif 'day of week' in phrase:
-            return self.weekday
+            return self.day_of_week
 
-        elif 'what time is it' in phrase:
+        elif 'time' in phrase:
             return self.current_time
         
         elif 'hour' in phrase:
@@ -45,7 +47,7 @@ class Time:
             elif check_all_phrase(phrase, ['last year', '1 year ago']):
                 return int(self.year) - 1
             
-            elif 'next year' in phrase:
+            elif check_all_phrase(phrase, ['next year', '1 year later']) in phrase:
                 return int(self.year) + 1
 
             else:

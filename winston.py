@@ -3,7 +3,7 @@ from audio import *
 from phrase import *
 from chatbot import Chatbot
 from time_info import Time
-import os, wikipedia
+import os, random, wikipedia
 import speech_recognition as sr
 
 os.system('cls')
@@ -33,9 +33,13 @@ while True:
             elif 'excel' in listened_text:
                 os.system('start excel.exe')
 
-            elif check_all_phrase(listened_text, ['exit', 'goodbye', 'quit', 'go away', 'bye', 'cancel']):
+            elif check_all_phrase(listened_text, ['bye', 'cancel', 'exit', 'go away', 'goodbye', 'quit']):
                 speak_text('Goodbye.')
                 break
+
+            elif check_all_phrase(listened_text, ['flip a coin', 'flip coin', 'coin flip']):
+                sides = ['Heads', 'Tails']
+                speak_text(random.choice(sides))
 
             elif 'help' in listened_text:
                 print('Excel: Open Excel')

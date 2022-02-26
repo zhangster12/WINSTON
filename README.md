@@ -38,7 +38,7 @@ deactivate
 ### Push updates to GitHub:
 ```
 git add .
-git commit -m 'Streamlined code'
+git commit -m 'Added coin flip'
 git push origin
 ```
 
